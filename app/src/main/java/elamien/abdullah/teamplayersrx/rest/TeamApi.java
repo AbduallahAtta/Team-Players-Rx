@@ -1,7 +1,7 @@
 package elamien.abdullah.teamplayersrx.rest;
 
 import elamien.abdullah.teamplayersrx.model.TeamPlayers;
-import io.reactivex.Observable;
+import io.reactivex.Flowable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
@@ -10,5 +10,5 @@ import retrofit2.http.Query;
  */
 public interface TeamApi {
     @GET("api/v1/json/1/searchplayers.php")
-    Observable<TeamPlayers> getTeamPlayers(@Query("t") String team);
+    Flowable<TeamPlayers> getTeamPlayers(@Query("t") String team);
 }
